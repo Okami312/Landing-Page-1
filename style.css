@@ -14,6 +14,8 @@
   --red: #f03e3d;
 }
 
+/* lets see */
+
 /* 
 Breakpoints:
 640px
@@ -323,7 +325,7 @@ nav.section-container {
   border-radius: 12px;
   background-color: var(--white);
   box-shadow: 0px 2px 8px 0px #00000040;
-  padding: 24px 74px 32px 64px;
+  padding: 24px 44px 24px 44px;
   max-width: 186px;
 }
 
@@ -334,7 +336,7 @@ nav.section-container {
   margin-right: auto;
   margin-left: auto;
   border-radius: 12px;
-  padding: 24px 74px 32px 74px;
+  padding: 24px 44px 24px 44px;
   box-shadow: 0px 2px 8px 0px #00000040;
 }
 
@@ -473,6 +475,121 @@ input:focus {
   outline: none;
 }
 
+@media (min-width: 768px) {
+  .about-product-cards {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .boost-product {
+    width: 490px;
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .designers-container {
+    display: flex;
+    gap: 22px;
+  }
+
+  .companies {
+    max-width: fit-content;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+  }
+}
+
+/* --- Quick & Easy Process --- */
+
+.quick-and-easy-process-container {
+  background-image: url(./Assets/quick-and-easy-process/bg-2.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  margin-bottom: 100px;
+  background-size: 100%;
+}
+
+.quick-and-easy-process-paragraph {
+  margin: 8px auto 40px auto;
+  max-width: 542px;
+}
+
+/* 
+justify-content vs align-items
+
+1) flex-direction: row
+justify-content: handle the elements in the div on the ox
+align-items: handle the elements in the div on the oy
+
+2) flex-direction: column
+justify-content: handle the elements in the div on the oy
+align-items: handle the elements in the div on the ox
+*/
+
+.freelancing-offers {
+  margin-bottom: 32px;
+}
+
+.first-freelancing-offer,
+.third-freelancing-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.second-freelancing-offer,
+.fourth-freelancing-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.first-freelancing-offer img:last-child,
+.second-freelancing-offer img:last-child,
+.third-freelancing-offer img:last-child,
+.fourth-freelancing-offer img:last-child {
+  width: 90px;
+}
+
+.contact-our-experts-button {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+@media (min-width: 441px) {
+  .first-freelancing-offer,
+  .second-freelancing-offer,
+  .third-freelancing-offer,
+  .fourth-freelancing-offer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .first-freelancing-offer,
+  .third-freelancing-offer {
+    flex-direction: row-reverse;
+  }
+
+  .card-container {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .card-container div {
+    margin-left: 24px;
+  }
+}
+
 @media (min-width: 1024px) {
   nav {
     box-shadow: none;
@@ -485,57 +602,7 @@ input:focus {
     gap: 24px;
     align-items: center;
   }
-}
 
-/* Header */
-
-.header-image {
-  width: 100%;
-  max-width: 440px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header-title {
-  margin-top: 12px;
-  text-align: center;
-  color: var(--black);
-  font-weight: 700;
-  line-height: 60px;
-  font-size: 36px;
-}
-
-.header-description {
-  margin-top: 16px;
-  text-align: center;
-  color: var(--black);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.watch-video {
-  color: var(--green);
-  text-decoration: underline;
-  font-weight: 600;
-  line-height: 24px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-buttons {
-  margin-top: 16px;
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 1024px) {
   header {
     display: flex;
     flex-direction: row-reverse;
@@ -543,11 +610,7 @@ input:focus {
     gap: 32px;
   }
   .header-image {
-    max-width: 542px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 100%;
+    max-width: 600px;
   }
   .header-title {
     text-align: left;
@@ -561,85 +624,7 @@ input:focus {
     justify-content: start;
     margin-top: 48px;
   }
-}
 
-/* About Product */
-
-.product-section-container {
-  background-image: url(./Assets/bg-background.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-  background-size: 100%;
-}
-
-.about-product-title {
-  text-align: center;
-  margin-bottom: 48px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 116px;
-}
-
-.about-product-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.about-product-cards div {
-  width: 240px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-product-cards div img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 24px;
-}
-
-.about-product-cards div h3 {
-  text-align: center;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 33px;
-  margin-bottom: 8px;
-}
-
-.about-product-cards div p {
-  text-align: center;
-}
-
-.about-product-button {
-  padding: 14px 32px 14px 32px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
-}
-
-.about-management {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-management div h2 {
-  margin-top: 8px;
-}
-
-.about-management div p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
-  width: 486px;
-  margin-top: 24px;
-  margin-bottom: 32px;
-}
-
-/*Temporary 1024px */
-@media (min-width: 1024px) {
   /* Management */
 
   .management-container {
@@ -791,6 +776,130 @@ input:focus {
     grid-column: 2/2;
     grid-row: 1/1;
   }
+
+  .about-product-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+/* Header */
+
+.header-image {
+  width: 100%;
+  max-width: 440px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-title {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--black);
+  font-weight: 700;
+  line-height: 60px;
+  font-size: 36px;
+}
+
+.header-description {
+  margin-top: 16px;
+  text-align: center;
+  color: var(--black);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.watch-video {
+  color: var(--green);
+  text-decoration: underline;
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About Product */
+
+.product-section-container {
+  background-image: url(./Assets/bg-background.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 100%;
+}
+
+.about-product-title {
+  text-align: center;
+  margin-bottom: 48px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 116px;
+}
+
+.about-product-cards div {
+  margin-top: 32px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-product-cards div img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+}
+
+.about-product-cards div h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 8px;
+}
+
+.about-product-cards div p {
+  text-align: center;
+}
+
+.about-product-button {
+  padding: 14px 32px 14px 32px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+
+.about-management {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-management div h2 {
+  margin-top: 8px;
+}
+
+.about-management div p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  width: 486px;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
 @media (min-width: 1280px) {
@@ -799,6 +908,12 @@ input:focus {
     background-repeat: no-repeat;
     background-position: 50% 100%;
     padding-bottom: 120px;
+  }
+
+  .about-product-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
   }
 
   .about-product-cards div img {
@@ -904,104 +1019,5 @@ input:focus {
   .companies img {
     margin: 0px;
     width: 391px;
-  }
-}
-
-@media (min-width: 768px) {
-  .about-product-cards {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .boost-product {
-    width: 490px;
-    color: var(--white);
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* --- Quick & Easy Process --- */
-
-.quick-and-easy-process-container {
-  background-image: url(./Assets/quick-and-easy-process/bg-2.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-  margin-bottom: 100px;
-  background-size: 100%;
-}
-
-.quick-and-easy-process-paragraph {
-  margin: 8px auto 40px auto;
-  max-width: 542px;
-}
-
-/* 
-justify-content vs align-items
-
-1) flex-direction: row
-justify-content: handle the elements in the div on the ox
-align-items: handle the elements in the div on the oy
-
-2) flex-direction: column
-justify-content: handle the elements in the div on the oy
-align-items: handle the elements in the div on the ox
-*/
-
-.freelancing-offers {
-  margin-bottom: 32px;
-}
-
-.first-freelancing-offer,
-.third-freelancing-offer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.second-freelancing-offer,
-.fourth-freelancing-offer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.first-freelancing-offer img:last-child,
-.second-freelancing-offer img:last-child,
-.third-freelancing-offer img:last-child,
-.fourth-freelancing-offer img:last-child {
-  width: 90px;
-}
-
-.contact-our-experts-button {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-}
-
-@media (min-width: 441px) {
-  .first-freelancing-offer,
-  .second-freelancing-offer,
-  .third-freelancing-offer,
-  .fourth-freelancing-offer {
-    flex-direction: row;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .first-freelancing-offer,
-  .third-freelancing-offer {
-    flex-direction: row-reverse;
-  }
-
-  .card-container {
-    max-width: 550px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-
-  .card-container div {
-    margin-left: 24px;
   }
 }
